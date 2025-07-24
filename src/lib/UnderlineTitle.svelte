@@ -1,5 +1,5 @@
 <script>
-    let { center } = $props();
+    let { center, text } = $props();
 </script>
 
 <h2 class="
@@ -8,5 +8,5 @@
     after:content-[''] after:absolute after:bottom-4 after:w-[64px] 
     after:h-[3px] after:bg-black
 ">
-    Our services
+    {text}
 </h2>

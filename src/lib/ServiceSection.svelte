@@ -7,7 +7,7 @@
     import infoIcon from '../assets/info.svg';
     import emergencyIcon from '../assets/emergency-icon.svg';
     import trackingIcon from '../assets/tracking-icon.svg';
-  import ActionButton from './ActionButton.svelte';
+    import ActionButton from './ActionButton.svelte';
     
 
 
@@ -50,11 +50,11 @@
     ];
 </script>
 
-<section>
+<section class=" mb-28">
     <div class="container">
-        <header class=" mb-20">
+        <header class=" mb-16">
             <div class=" max-w-3xl mx-auto">
-                <UnderlineTitle center={true} />
+                <UnderlineTitle center={true} text={"Our services"} />
                 <p class="text-gray-500 text-center text-md font-normal mt-6">
                     We provide to you the best choiches for you. 
                     Adjust it to your health needs and make sure your undergo treatment with our 
