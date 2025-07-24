@@ -6,6 +6,10 @@ Une landing page moderne et responsive pour une plateforme de santé digitale, d
 
 ![Trafalgar Landing Page Screenshot](./src/assets/trafalgar.png)
 
+## Visiter la page
+- [Trafalgar landing page](https://trafalgar-site-seven.vercel.app/)
+- [Voir le code source](https://github.com/NitiemaAllassane/trafalgar-site.git)
+
 ## ✨ Fonctionnalités
 
 - **Design responsive** - Optimisé pour tous les appareils (mobile, tablette, desktop)
@@ -149,7 +153,7 @@ Chaque section est un composant Svelte réutilisable dans `src/lib/`.
 
 ## 👨‍💻 Auteur
 
-**Votre Nom**
+**Nitiema Allassane**
 - GitHub: [@NitiemaAllassane](https://github.com/NitiemaAllassane)
 - LinkedIn: [Nitiema Allassane](https://www.linkedin.com/in/allassane-nitiema-400a5835a/)
 
