@@ -1,47 +1,164 @@
-# Svelte + TS + Vite
+# Trafalgar Landing Page
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Une landing page moderne et responsive pour une plateforme de santé digitale, développée avec SvelteKit et Tailwind CSS.
 
-## Recommended IDE Setup
+## 📸 Aperçu du projet
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+![Trafalgar Landing Page Screenshot](./src/assets/trafalgar.png)
 
-## Need an official Svelte framework?
+## ✨ Fonctionnalités
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- **Design responsive** - Optimisé pour tous les appareils (mobile, tablette, desktop)
+- **Interface moderne** - Design clean avec des gradients et animations fluides
+- **Carrousel de témoignages** - Navigation interactive avec flèches et indicateurs
+- **Sections dynamiques** - Hero, services, témoignages, footer
+- **Animations CSS** - Transitions et hover effects
+- **Performance optimisée** - Bundle léger avec SvelteKit
 
-## Technical considerations
+## 🛠️ Technologies utilisées
 
-**Why use this over SvelteKit?**
+- **[SvelteKit](https://kit.svelte.dev/)** - Framework JavaScript moderne
+- **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS utilitaire
+- **[Iconify](https://iconify.design/)** - Bibliothèque d'icônes
+- **Vite** - Build tool rapide
+- **HTML5/CSS3** - Standards web modernes
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## 🚀 Installation et lancement
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+### Prérequis
+- Node.js (version 16 ou supérieure)
+- npm ou yarn
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+### Installation
+```bash
+# Cloner le repository
+git clone https://github.com/NitiemaAllassane/trafalgar-site.git
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+# Naviguer dans le dossier
+cd trafalgar-landing-page
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+# Installer les dépendances
+npm install
 ```
+
+### Développement
+```bash
+# Lancer le serveur de développement
+npm run dev
+
+# Ouvrir http://localhost:5173 dans votre navigateur
+```
+
+### Build de production
+```bash
+# Créer le build optimisé
+npm run build
+
+# Prévisualiser le build
+npm run preview
+```
+
+## 📁 Structure du projet
+
+```
+src/
+├── lib/
+│       ├── Hero.svelte
+│       ├── Services.svelte
+│       ├── Testimonials.svelte
+│       ├── Footer.svelte
+│       └── UnderlineTitle.svelte
+├── assets/
+│   ├── images/
+```
+
+## 🎨 Personnalisation
+
+### Couleurs
+Les couleurs principales sont définies dans `tailwind.config.js` :
+```css
+@theme {
+    /* color */
+    --color-primary: #458FF6;
+    --color-gray-500: #7D7987;
+    --color-gradient-start: #67C3F3;
+    --color-gradient-end: #5A98F2;
+
+    --font-mulish: 'Muslish', sans-serif;
+    --font-weight-md: 500;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+
+    --text-md:  1.125rem;
+
+    --breakpoint-md: 770px;
+}
+
+@layer base {
+    p {
+        line-height: 1.6;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    body {
+        font-family: var(--font-mulish);
+        background-color: #fff;
+        color: #000;
+    }
+
+h1, h2, h3, h4 {
+        line-height: 1.5;
+    }
+
+}
+```
+
+### Composants
+Chaque section est un composant Svelte réutilisable dans `src/lib/`.
+
+## 📱 Responsive Design
+
+- **Mobile First** - Design optimisé pour mobile puis adapté aux écrans plus larges
+- **Breakpoints Tailwind** - sm, md, lg, xl
+- **Grid et Flexbox** - Layout flexible et moderne
+
+## 🌟 Fonctionnalités principales
+
+### Hero Section
+- Call-to-action prominent
+- Illustration médicale
+- Design gradient attractif
+
+### Section Services
+- Grid responsive des services
+- Icônes et descriptions
+- Hover effects
+
+### Carrousel de témoignages
+- Navigation par flèches
+- Indicateurs radio buttons
+- Transitions fluides
+
+### Footer
+- Liens organisés par catégories
+- Informations de contact
+- Design cohérent avec le site
+
+## 👨‍💻 Auteur
+
+**Votre Nom**
+- GitHub: [@NitiemaAllassane](https://github.com/NitiemaAllassane)
+- LinkedIn: [Nitiema Allassane](https://www.linkedin.com/in/allassane-nitiema-400a5835a/)
+
+## 🙏 Remerciements
+
+- Design inspiré des meilleures pratiques UX/UI
+- Icônes fournies par [Iconify](https://iconify.design/)
+- Framework CSS par [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+⭐ N'hésitez pas à donner une étoile si ce projet vous a plus 🙂!

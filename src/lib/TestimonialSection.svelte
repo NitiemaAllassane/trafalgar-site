@@ -31,7 +31,7 @@
 <section class="mb-28 md:mb-56">
     <div class="container">
         <div class="bg-gradient-to-b from-gradient-start to-gradient-end p-6 pt-16 md:p-16 rounded-3xl mb-10">
-            <UnderlineTitle text={"What our customer are saying"} textColor={"white"} lineColor={"white"} center={true} />
+            <UnderlineTitle text={"What our customer are saying"} textColor={"white"} isLineBlack={false} center={true} />
             {#each testimonials as testimonial }
                 <article class="mt-6 md:mt-20 grid grid-cols-1 md:grid-cols-2 items-center">
                     <div class="flex flex-col md:flex-row items-center gap-6 mb-6 md:mb-0">
