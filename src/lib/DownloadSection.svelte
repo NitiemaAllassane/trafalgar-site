@@ -1,7 +1,7 @@
 <script>
-    import ActionButton from "./lib/ActionButton.svelte";
-    import UnderlineTitle from "./lib/UnderlineTitle.svelte";
-    import downloaIllustration from './assets/download_app_illustration.png';
+    import ActionButton from "./ActionButton.svelte";
+    import UnderlineTitle from "./UnderlineTitle.svelte";
+    import downloaIllustration from '../assets/download_app_illustration.png';
 </script>
 
 <section class=" mb-28">

@@ -65,7 +65,7 @@
 
         <section class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-6 mb-20">
             {#each services as card }
-                <article class=" w-auto md:w-[350px] p-6 md:p-11 shadow-[5px_16px_64px_rgba(0,0,0,0.1)] rounded-3xl ">
+                <article class=" w-auto md:w-[350px] p-6 md:p-11 shadow-[5px_5px_64px_rgba(0,0,0,0.1)] rounded-3xl ">
                     <figure class=" mb-6">
                         <img src={card.image} alt="search icon illustration">
                     </figure>
