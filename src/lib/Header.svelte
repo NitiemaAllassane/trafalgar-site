@@ -1,6 +1,14 @@
-<script>
+<script lang="ts">
     import Logo from './Logo.svelte';
     import MenuButton from './MenuButton.svelte';
+    import MobileNav from './MobileNav.svelte';
+
+    import { mobileNav } from '../globalState.svelte';
+
+
+    function openMobileNav(): void {
+        mobileNav.isOpen = true;
+    }
 </script>
 
 <header class=" py-10 mb-6">
@@ -16,7 +24,11 @@
                     <li><a href="/" class="text-gray-500 hover:text-black transition duration-300">About us</a></li>
                 </ul>
             </nav>
-            <MenuButton />
+            <MenuButton doAction={openMobileNav} />
         </div>
     </div>
 </header>
+
+{#if mobileNav.isOpen}
+    <MobileNav />
+{/if}
